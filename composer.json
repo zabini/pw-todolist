@@ -1,0 +1,31 @@
+{
+    "name": "zabini/pw-etec-todolist",
+    "description": "An todo list app, made for PW - ETEC",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Hugo Zabini",
+            "email": "hugo.zabini98@hotmail.com",
+            "role": "Developer",
+            "homepage": "https://github.com/zabini"
+        }
+    ],
+    "config": {
+      "vendor-dir": "vendor"
+    },
+    "autoload": {
+      "psr-4": {
+        "Source\\": "source/"
+      },
+      "files": [
+        "source/Config.php"
+      ]
+    },
+    "require": {
+        "coffeecode/datalayer": "^1.1",
+        "vlucas/phpdotenv": "^5.3",
+        "firebase/php-jwt": "^5.2"
+    }
+}
