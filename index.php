@@ -2,7 +2,5 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-echo "<pre>";
-print_r(DATA_LAYER_CONFIG);
-echo "</pre>";
+echo "<h1>It's Work</h1>";
 exit;

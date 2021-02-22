@@ -13,15 +13,15 @@
         }
     ],
     "config": {
-      "vendor-dir": "vendor"
+        "vendor-dir": "vendor"
     },
     "autoload": {
-      "psr-4": {
-        "Source\\": "source/"
-      },
-      "files": [
-        "source/Config.php"
-      ]
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
     },
     "require": {
         "coffeecode/datalayer": "^1.1",
