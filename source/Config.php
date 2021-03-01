@@ -18,4 +18,9 @@ define("DATA_LAYER_CONFIG", [
     ]
 ]);
 
-define("JWT_KEY", $_ENV["JWT_KEY"] ?? "");
+define("JWT_KEY", $_ENV["JWT_KEY"]);
+define("JWT_ALG", $_ENV["JWT_ALG"]);
+
+if (empty(JWT_KEY) || empty(JWT_ALG)) {
+    throw new Exception("JWT KEY is empty", 1);
+}

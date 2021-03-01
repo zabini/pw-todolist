@@ -10,9 +10,7 @@ if (empty($_REQUEST['email']) || empty($_REQUEST['password'])) {
     Helper::warning("Alguns dados não foram informados, verifique os campos!");
 }
 
-$model = new User();
-
-$user = $model->find('email = :email', 'email=' . $_REQUEST['email'])->fetch(true);
+$user = (new User())->find('email = :email', 'email=' . $_REQUEST['email'])->fetch(true);
 if (is_null($user)) {
     Helper::warning("Login inválido, por favor, verifique seus dados!");
 }
@@ -24,8 +22,13 @@ if (!password_verify($_REQUEST['password'], $user->password)) {
 }
 
 Helper::success('Success', [
-    'jwt' => JWT::encode([
-        'email' => $user->email,
-        'unique_id' => date('Y-m-d H:i:s'),
-    ], JWT_KEY)
+    'jwt' => JWT::encode(
+        [
+            'id' => $user->id,
+            'email' => $user->email,
+            'uniqid' => uniqid(date('YmdHis'), true),
+        ],
+        JWT_KEY,
+        JWT_ALG
+    )
 ]);
