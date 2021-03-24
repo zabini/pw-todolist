@@ -14,7 +14,6 @@ if (
     Helper::warning("O filtro data não foi informado!");
 }
 
-
 $filter = [
     'user_id' => $user->id,
     'date' => date_create($_REQUEST['date'])->format('Y-m-d'),
