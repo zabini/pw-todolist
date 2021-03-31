@@ -3,8 +3,6 @@
 use Source\Model\Task;
 use Source\Utils\Helper;
 
-require __DIR__ . "/../../../vendor/autoload.php";
-
 $user = Helper::getAuthUser();
 
 if (
@@ -13,7 +11,6 @@ if (
 ) {
     Helper::warning("O filtro data não foi informado!");
 }
-
 
 $filter = [
     'user_id' => $user->id,

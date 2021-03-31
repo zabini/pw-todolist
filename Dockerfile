@@ -4,7 +4,8 @@ FROM php:7.3-apache
 RUN apt-get update && apt-get install -y \
     git curl libpng-dev libonig-dev libxml2-dev libzip-dev zip unzip tzdata \
     && docker-php-ext-install zip pdo_mysql mbstring exif pcntl bcmath gd \
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+    && apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && a2enmod rewrite
 
 RUN usermod -u 1000 www-data
 

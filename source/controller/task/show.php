@@ -3,8 +3,6 @@
 use Source\Model\Task;
 use Source\Utils\Helper;
 
-require __DIR__ . "/../../../vendor/autoload.php";
-
 $user = Helper::getAuthUser();
 
 if (empty($_REQUEST['id'])) {

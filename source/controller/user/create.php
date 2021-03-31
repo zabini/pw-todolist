@@ -3,8 +3,6 @@
 use Source\Model\User;
 use Source\Utils\Helper;
 
-require __DIR__ . "/../../../vendor/autoload.php";
-
 if (
     empty($_REQUEST['name']) ||
     empty($_REQUEST['email']) ||
