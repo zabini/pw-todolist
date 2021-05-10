@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../../../vendor/autoload.php";
+
 use Firebase\JWT\JWT;
 use Source\Model\User;
 use Source\Utils\Helper;

@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../../../vendor/autoload.php";
+
 use Source\Model\Task;
 use Source\Utils\Helper;
 
