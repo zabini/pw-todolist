@@ -9,7 +9,7 @@
 
     <!-- Site Properties -->
 
-    <title>Login Example - Semantic</title>
+    <title>Login - to do list</title>
 
     <link rel="manifest" href="public/manifest.json" />
 
@@ -36,28 +36,28 @@
         }
     </style>
     <script>
-        if ('serviceWorker' in navigator) {
+        // if ('serviceWorker' in navigator) {
 
-            window.addEventListener('load', function() {
+        //     window.addEventListener('load', function() {
 
-                navigator.serviceWorker.register('public/scripts/sw.js').then(function(registration) {
+        //         navigator.serviceWorker.register('public/scripts/sw.js').then(function(registration) {
 
-                    console.log('Worker registration successful', registration.scope);
+        //             console.log('Worker registration successful', registration.scope);
 
-                }, function(err) {
+        //         }, function(err) {
 
-                    console.log('Worker registration failed', err);
+        //             console.log('Worker registration failed', err);
 
-                }).catch(function(err) {
+        //         }).catch(function(err) {
 
-                    console.log(err);
+        //             console.log(err);
 
-                });
-            });
+        //         });
+        //     });
 
-        } else {
-            console.log('Service Worker is not supported by browser.');
-        }
+        // } else {
+        //     console.log('Service Worker is not supported by browser.');
+        // }
 
         $(document)
             .ready(function() {

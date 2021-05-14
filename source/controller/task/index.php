@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . "/../../../vendor/autoload.php";
+
 use Source\Model\Task;
 use Source\Utils\Helper;
 
@@ -28,5 +30,5 @@ if ($task->fail()) {
 Helper::success('Success', [
     'data' => array_map(function ($task) {
         return $task->data();
-    }, $tasks)
+    }, $tasks ?? [])
 ]);

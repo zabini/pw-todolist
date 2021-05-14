@@ -11,7 +11,6 @@ $(document).ready(function () {
       var xhr = new XMLHttpRequest();
 
       xhr.addEventListener("readystatechange", function () {
-
         if (this.readyState === 4) {
           response = JSON.parse(this.responseText);
 
@@ -22,9 +21,7 @@ $(document).ready(function () {
 
           localStorage.setItem("jwt", response.jwt);
 
-          alert(
-            "Login realizado com sucesso, redirecionar pra tela principal."
-          );
+          window.location = '/task';
         }
       });
 
